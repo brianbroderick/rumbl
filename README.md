@@ -1,2 +1,2 @@
-# lensformation
+# LensFormation
 LensFormation Server
