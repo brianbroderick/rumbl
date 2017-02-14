@@ -4,6 +4,9 @@
 /deps
 /*.ez
 
+# Rubymine
+.idea
+
 # Generated on crash by the VM
 erl_crash.dump
 

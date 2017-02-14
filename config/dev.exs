@@ -36,8 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :lensformation, Lensformation.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "lensformation_dev",
+  username: "brian.broderick",
+  # password: "postgres",
+  database: "lf_dev",
   hostname: "localhost",
   pool_size: 10
