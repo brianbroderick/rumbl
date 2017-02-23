@@ -17,4 +17,10 @@ defmodule Lensformation.SessionController do
         |> render("new.html")
     end
   end
+
+  def delete(conn, _) do
+    conn
+    |> Lensformation.Auth.logout()
+    |> redirect(to: page_path(conn, :index))
+  end
 end
