@@ -36,6 +36,7 @@ defmodule Lensformation.Web do
 
       import Lensformation.Router.Helpers
       import Lensformation.Gettext
+      import Lensformation.Auth, only: [authenticate_user: 2]
     end
   end
 
@@ -58,6 +59,8 @@ defmodule Lensformation.Web do
   def router do
     quote do
       use Phoenix.Router
+
+      import Lensformation.Auth, only: [authenticate_user: 2]
     end
   end
 
