@@ -6,6 +6,7 @@ defmodule Lensformation.User do
     field :username, :string
     field :password, :string, virtual: true
     field :password_hash, :string
+    has_many :videos, Lensformation.Video
 
     timestamps()
   end
