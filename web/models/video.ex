@@ -18,5 +18,6 @@ defmodule Lensformation.Video do
     struct
     |> cast(params, [:url, :title, :description])
     |> validate_required([:url, :title, :description])
+    |> assoc_constraint(:category)
   end
 end

@@ -12,8 +12,9 @@ config :logger, level: :warn
 # Configure your database
 config :lensformation, Lensformation.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "lensformation_test",
+  username: "brian.broderick",
+  # password: "postgres",
+  database: "lf_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
