@@ -2,6 +2,9 @@ defmodule Lensformation.VideoController do
   use Lensformation.Web, :controller
 
   alias Lensformation.Video
+  alias Lensformation.Category
+
+  plug :load_categories when action in [:new, :create, :edit, :update]
 
   def index(conn, _params, user) do
     videos = Repo.all(user_videos(user))
@@ -77,5 +80,14 @@ defmodule Lensformation.VideoController do
 
   defp user_videos(user) do
     assoc(user, :videos)
+  end
+
+  defp load_categories(conn, _) do
+    query = 
+      Category
+      |> Category.alphabetical
+      |> Category.names_and_ids
+    categories = Repo.all query
+    assign(conn, :categories, categories)  
   end
 end
