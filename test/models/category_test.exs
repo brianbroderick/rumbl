@@ -1,7 +1,7 @@
-defmodule Lensformation.CategoryTest do
-  use Lensformation.ModelCase
+defmodule Rumbl.CategoryTest do
+  use Rumbl.ModelCase
 
-  alias Lensformation.Category
+  alias Rumbl.Category
 
   @valid_attrs %{name: "some content"}
   @invalid_attrs %{}

@@ -1,4 +1,4 @@
-defmodule Lensformation.Repo.Migrations.CreateCategory do
+defmodule Rumbl.Repo.Migrations.CreateCategory do
   use Ecto.Migration
 
   def change do

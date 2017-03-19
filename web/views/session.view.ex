@@ -1,3 +1,3 @@
-defmodule Lensformation.SessionView do
-  use Lensformation.Web, :view
+defmodule Rumbl.SessionView do
+  use Rumbl.Web, :view
 end

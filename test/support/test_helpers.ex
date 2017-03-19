@@ -1,5 +1,5 @@
-defmodule Lensformation.TestHelpers do
-  alias Lensformation.Repo
+defmodule Rumbl.TestHelpers do
+  alias Rumbl.Repo
 
   def insert_user(attrs \\ %{}) do 
     changes = Dict.merge(%{
@@ -8,8 +8,8 @@ defmodule Lensformation.TestHelpers do
       password: "supersecret",
     }, attrs)
 
-    %Lensformation.User{}
-    |> Lensformation.User.registration_changeset(changes)
+    %Rumbl.User{}
+    |> Rumbl.User.registration_changeset(changes)
     |> Repo.insert!()
   end
 

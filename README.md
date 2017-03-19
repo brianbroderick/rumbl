@@ -1,4 +1,4 @@
-# Lensformation
+# Rumbl 
 
 To start your Phoenix app:
 

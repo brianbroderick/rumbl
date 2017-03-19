@@ -1,15 +1,15 @@
-defmodule Lensformation.UserController do
-  use Lensformation.Web, :controller
+defmodule Rumbl.UserController do
+  use Rumbl.Web, :controller
   plug :authenticate_user when action in [:index, :show]
-  alias Lensformation.User
+  alias Rumbl.User
 
   def index(conn, _params) do
-    users = Repo.all(Lensformation.User)
+    users = Repo.all(Rumbl.User)
     render conn, "index.html", users: users
   end
 
   def show(conn, %{"id" => id}) do
-    user = Repo.get(Lensformation.User, String.to_integer(id))
+    user = Repo.get(Rumbl.User, String.to_integer(id))
     render conn, "show.html", user: user
   end
 
@@ -23,7 +23,7 @@ defmodule Lensformation.UserController do
     case Repo.insert(changeset) do
       {:ok, user} ->
         conn
-        |> Lensformation.Auth.login(user)
+        |> Rumbl.Auth.login(user)
         |> put_flash(:info, "#{user.name} created!")
         |> redirect(to: user_path(conn, :index))
       {:error, changeset} ->

@@ -1,8 +1,8 @@
-defmodule Lensformation.VideoController do
-  use Lensformation.Web, :controller
+defmodule Rumbl.VideoController do
+  use Rumbl.Web, :controller
 
-  alias Lensformation.Video
-  alias Lensformation.Category
+  alias Rumbl.Video
+  alias Rumbl.Category
 
   plug :load_categories when action in [:new, :create, :edit, :update]
 

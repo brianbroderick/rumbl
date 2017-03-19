@@ -1,3 +1,3 @@
-defmodule Lensformation.LayoutViewTest do
-  use Lensformation.ConnCase, async: true
+defmodule Rumbl.LayoutViewTest do
+  use Rumbl.ConnCase, async: true
 end

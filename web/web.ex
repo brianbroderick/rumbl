@@ -1,12 +1,12 @@
-defmodule Lensformation.Web do
+defmodule Rumbl.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use Lensformation.Web, :controller
-      use Lensformation.Web, :view
+      use Rumbl.Web, :controller
+      use Rumbl.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -30,13 +30,13 @@ defmodule Lensformation.Web do
     quote do
       use Phoenix.Controller
 
-      alias Lensformation.Repo
+      alias Rumbl.Repo
       import Ecto
       import Ecto.Query
 
-      import Lensformation.Router.Helpers
-      import Lensformation.Gettext
-      import Lensformation.Auth, only: [authenticate_user: 2]
+      import Rumbl.Router.Helpers
+      import Rumbl.Gettext
+      import Rumbl.Auth, only: [authenticate_user: 2]
     end
   end
 
@@ -50,9 +50,9 @@ defmodule Lensformation.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import Lensformation.Router.Helpers
-      import Lensformation.ErrorHelpers
-      import Lensformation.Gettext
+      import Rumbl.Router.Helpers
+      import Rumbl.ErrorHelpers
+      import Rumbl.Gettext
     end
   end
 
@@ -60,7 +60,7 @@ defmodule Lensformation.Web do
     quote do
       use Phoenix.Router
 
-      import Lensformation.Auth, only: [authenticate_user: 2]
+      import Rumbl.Auth, only: [authenticate_user: 2]
     end
   end
 
@@ -68,10 +68,10 @@ defmodule Lensformation.Web do
     quote do
       use Phoenix.Channel
 
-      alias Lensformation.Repo
+      alias Rumbl.Repo
       import Ecto
       import Ecto.Query
-      import Lensformation.Gettext
+      import Rumbl.Gettext
     end
   end
 

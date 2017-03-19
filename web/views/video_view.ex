@@ -1,3 +1,3 @@
-defmodule Lensformation.VideoView do
-  use Lensformation.Web, :view
+defmodule Rumbl.VideoView do
+  use Rumbl.Web, :view
 end

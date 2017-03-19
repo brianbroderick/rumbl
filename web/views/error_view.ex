@@ -1,5 +1,5 @@
-defmodule Lensformation.ErrorView do
-  use Lensformation.Web, :view
+defmodule Rumbl.ErrorView do
+  use Rumbl.Web, :view
 
   def render("404.html", _assigns) do
     "Page not found"

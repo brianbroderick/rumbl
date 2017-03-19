@@ -1,6 +1,6 @@
-defmodule Lensformation.VideoControllerTest do
-  use Lensformation.ConnCase
-  alias Lensformation.Video
+defmodule Rumbl.VideoControllerTest do
+  use Rumbl.ConnCase
+  alias Rumbl.Video
   @valid_attrs %{url: "http://youtu.be", title: "vid", description: "a vid"}
   @invalid_attrs %{title: "invalid"}
 

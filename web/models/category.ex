@@ -1,9 +1,9 @@
-defmodule Lensformation.Category do
-  use Lensformation.Web, :model
+defmodule Rumbl.Category do
+  use Rumbl.Web, :model
 
   schema "categories" do
     field :name, :string
-    has_many :videos, Lensformation.Video
+    has_many :videos, Rumbl.Video
 
     timestamps()
   end

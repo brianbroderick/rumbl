@@ -6,15 +6,15 @@
 use Mix.Config
 
 # General application configuration
-config :lensformation,
-  ecto_repos: [Lensformation.Repo]
+config :rumbl,
+  ecto_repos: [Rumbl.Repo]
 
 # Configures the endpoint
-config :lensformation, Lensformation.Endpoint,
+config :rumbl, Rumbl.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "3GHhEX5aEvCY+JL3LjUlCJ61iy7fm95FQgXizqOYPvtZlTL+XCsFs0tn/cGEcDFR",
-  render_errors: [view: Lensformation.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Lensformation.PubSub,
+  render_errors: [view: Rumbl.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: Rumbl.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

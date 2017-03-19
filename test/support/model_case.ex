@@ -1,4 +1,4 @@
-defmodule Lensformation.ModelCase do
+defmodule Rumbl.ModelCase do
   @moduledoc """
   This module defines the test case to be used by
   model tests.
@@ -16,20 +16,20 @@ defmodule Lensformation.ModelCase do
 
   using do
     quote do
-      alias Lensformation.Repo
+      alias Rumbl.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import Lensformation.ModelCase
+      import Rumbl.ModelCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Lensformation.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Rumbl.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Lensformation.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Rumbl.Repo, {:shared, self()})
     end
 
     :ok
@@ -59,7 +59,7 @@ defmodule Lensformation.ModelCase do
   """
   def errors_on(struct, data) do
     struct.__struct__.changeset(struct, data)
-    |> Ecto.Changeset.traverse_errors(&Lensformation.ErrorHelpers.translate_error/1)
+    |> Ecto.Changeset.traverse_errors(&Rumbl.ErrorHelpers.translate_error/1)
     |> Enum.flat_map(fn {key, errors} -> for msg <- errors, do: {key, msg} end)
   end
 end

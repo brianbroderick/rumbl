@@ -1,7 +1,7 @@
-defmodule Lensformation.VideoTest do
-  use Lensformation.ModelCase
+defmodule Rumbl.VideoTest do
+  use Rumbl.ModelCase
 
-  alias Lensformation.Video
+  alias Rumbl.Video
 
   @valid_attrs %{description: "some content", title: "some content", url: "some content"}
   @invalid_attrs %{}

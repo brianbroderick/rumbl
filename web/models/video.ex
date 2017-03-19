@@ -1,12 +1,12 @@
-defmodule Lensformation.Video do
-  use Lensformation.Web, :model
+defmodule Rumbl.Video do
+  use Rumbl.Web, :model
 
   schema "videos" do
     field :url, :string
     field :title, :string
     field :description, :string
-    belongs_to :user, Lensformation.User
-    belongs_to :category, Lensformation.Category
+    belongs_to :user, Rumbl.User
+    belongs_to :category, Rumbl.Category
 
     timestamps()
   end

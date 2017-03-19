@@ -1,4 +1,4 @@
-defmodule Lensformation.Repo.Migrations.CreateVideo do
+defmodule Rumbl.Repo.Migrations.CreateVideo do
   use Ecto.Migration
 
   def change do

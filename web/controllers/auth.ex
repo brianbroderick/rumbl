@@ -1,9 +1,9 @@
-defmodule Lensformation.Auth do
+defmodule Rumbl.Auth do
   import Plug.Conn
   import Comeonin.Bcrypt, only: [checkpw: 2, dummy_checkpw: 0]
   import Phoenix.Controller
 
-  alias Lensformation.Router.Helpers
+  alias Rumbl.Router.Helpers
 
   def init(opts) do
     Keyword.fetch!(opts, :repo)
@@ -15,7 +15,7 @@ defmodule Lensformation.Auth do
     cond do 
       user = conn.assigns[:current_user] -> 
         conn
-      user = user_id && repo.get(Lensformation.User, user_id) ->
+      user = user_id && repo.get(Rumbl.User, user_id) ->
         assign(conn, :current_user, user)
       true -> 
         assign(conn, :current_user, nil)
@@ -31,7 +31,7 @@ defmodule Lensformation.Auth do
 
   def login_by_username_and_pass(conn, username, given_pass, opts) do
     repo = Keyword.fetch!(opts, :repo)
-    user = repo.get_by(Lensformation.User, username: username)
+    user = repo.get_by(Rumbl.User, username: username)
 
     cond do
       user && checkpw(given_pass, user.password_hash) ->

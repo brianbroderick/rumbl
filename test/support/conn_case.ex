@@ -1,4 +1,4 @@
-defmodule Lensformation.ConnCase do
+defmodule Rumbl.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -20,24 +20,24 @@ defmodule Lensformation.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      alias Lensformation.Repo
+      alias Rumbl.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
 
-      import Lensformation.Router.Helpers
-      import Lensformation.TestHelpers
+      import Rumbl.Router.Helpers
+      import Rumbl.TestHelpers
 
       # The default endpoint for testing
-      @endpoint Lensformation.Endpoint
+      @endpoint Rumbl.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Lensformation.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Rumbl.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Lensformation.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(Rumbl.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}
