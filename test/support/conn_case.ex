@@ -26,6 +26,7 @@ defmodule Lensformation.ConnCase do
       import Ecto.Query
 
       import Lensformation.Router.Helpers
+      import Lensformation.TestHelpers
 
       # The default endpoint for testing
       @endpoint Lensformation.Endpoint
