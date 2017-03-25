@@ -1,5 +1,5 @@
 defmodule Rumbl.WatchView do
-  use Rumble.Web, :view
+  use Rumbl.Web, :view
 
   def player_id(video) do
     ~r{^.*(?:youtu\.be/|\w+/|v=)(?<id>[^#&?]*)}
