@@ -18,7 +18,7 @@ config :rumbl, Rumbl.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "brian.broderick",
   # password: "postgres",
-  database: "lf_test",
+  database: "rumbl_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
 
